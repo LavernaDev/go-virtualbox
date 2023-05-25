@@ -18,6 +18,8 @@ var (
 	reVMInfoLine      = regexp.MustCompile(`(?:"(.+)"|(.+))=(?:"(.*)"|(.*))`)
 	reColonLine       = regexp.MustCompile(`(.+):\s+(.*)`)
 	reMachineNotFound = regexp.MustCompile(`Could not find a registered machine named '(.+)'`)
+	reSnapshotList    = regexp.MustCompile(`Name: (.*) \(UUID: ([a-z0-9\-]*)\)`)
+	reSnapshotFailed  = regexp.MustCompile(`Failed to take snapshot`)
 )
 
 // Manage returns the Command to run VBoxManage/VBoxControl.
